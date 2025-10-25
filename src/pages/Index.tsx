@@ -48,26 +48,48 @@ const Index = () => {
         </nav>
       </header>
 
-      <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center px-4 pt-16 md:pt-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=80)' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/50 via-zinc-950/30 to-zinc-950" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider">WAVES BAR</h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 mb-8 md:mb-10 max-w-2xl mx-auto">Каждодневно покоряем океаном и пляжными коктейлями</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+        <div className="absolute inset-0 grid grid-cols-3 md:grid-cols-3">
+          <div 
+            className="relative bg-cover bg-center"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80)' }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+          <div 
+            className="relative bg-cover bg-center"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80)' }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+          <div 
+            className="relative bg-cover bg-center"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1587223075055-82e9a937ddff?w=800&q=80)' }}
+          >
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/50 to-zinc-950" />
+        
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 py-12">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-wider drop-shadow-2xl" style={{ textShadow: '0 0 30px rgba(6, 182, 212, 0.5)' }}>
+            WAVES BAR
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto drop-shadow-lg">
+            Каждодневно покоряем океаном и пляжными коктейлями
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Button 
               onClick={() => scrollToSection('menu')}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-5 md:py-6 text-base md:text-lg rounded-lg w-full sm:w-auto"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 md:py-5 text-base md:text-lg rounded-full w-full sm:w-auto shadow-lg shadow-cyan-500/30"
             >
-              Наше меню
+              Меню
             </Button>
             <Button 
               onClick={() => scrollToSection('booking')}
               variant="outline"
-              className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-5 md:py-6 text-base md:text-lg rounded-lg w-full sm:w-auto"
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-500/20 px-8 py-4 md:py-5 text-base md:text-lg rounded-full w-full sm:w-auto backdrop-blur-sm"
             >
               Забронировать
             </Button>
